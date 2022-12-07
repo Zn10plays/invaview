@@ -1,8 +1,8 @@
-From node:18.11-alpine
+FROM node:18.11-alpine
 
 WORKDIR /usr/app
 
-copy . .
+COPY . .
 
 RUN npm ci --only=production
 
