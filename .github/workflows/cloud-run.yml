@@ -49,9 +49,10 @@ on:
     branches: [ "main" ]
 
 env:
-  PROJECT_ID: ${{ secrets.GCP_PROJECT_NAME }} # TODO: update Google Cloud project id
-  SERVICE: YOUR_SERVICE_NAME # TODO: update Cloud Run service name
-  REGION: us-central1 # TODO: update Cloud Run service region
+  PROJECT_ID: ${{ secrets.GCP_PROJECT_NAME }}
+  SERVICE: inva-view-deploy-service-account 
+  GAR_LOCATION: us-central1
+  REGION: us-central1
 
 jobs:
   deploy:
