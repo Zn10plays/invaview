@@ -8,16 +8,24 @@ import '@fontsource/roboto/700.css';
 
 import Paper from '@mui/material/Paper';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import useMediaQuery from "@mui/material/useMediaQuery";
+import React from "react";
 
 export default function App({ Component, pageProps }: AppProps) {
 
-  const darkTheme = createTheme({
-    palette: {
-      mode: 'dark'
-    }
-  })
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
 
-  return <ThemeProvider theme={darkTheme}>
+  const theme = React.useMemo(
+    () =>
+      createTheme({
+        palette: {
+          mode: prefersDarkMode ? 'dark' : 'light',
+        },
+      }),
+    [prefersDarkMode],
+  );
+
+  return <ThemeProvider theme={theme}>
     <Paper sx={{height: '100vh'}} square>
       <Component {...pageProps} />
     </Paper>
