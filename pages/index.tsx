@@ -10,6 +10,7 @@ import Backdrop from "@mui/material/Backdrop";
 import LoginForm from "../components/login/LoginForm";
 import {useState} from "react";
 import Alert from "@mui/material/Alert";
+import Link from "next/link";
 
 export default function Home() {
   const [user, loading, error] = useAuthState(auth);
@@ -51,7 +52,7 @@ export default function Home() {
               <Button color='error' sx={{flex: '1 1'}} startIcon={<PersonIcon/>} onClick={signOut}>
                 Sign out
               </Button>
-              <Button variant="outlined" color="primary" sx={{flex: '1 1'}} startIcon={<DashboardIcon/>}>
+              <Button variant="outlined" color="primary" sx={{flex: '1 1'}} startIcon={<DashboardIcon/>} component={Link} href={'/dashboard'}>
                 Dashboard
               </Button>
             </Box>
