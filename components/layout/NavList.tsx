@@ -44,8 +44,8 @@ const routes: Route[] = [
     icon: DashboardIcon
   },
   {
-    title: 'Images',
-    to: 'images',
+    title: 'Photos',
+    to: 'photos',
     icon: CollectionsIcon
   },
   {
