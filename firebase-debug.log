@@ -1,55 +1,38 @@
-[debug] [2022-12-17T23:02:04.464Z] ----------------------------------------------------------------------
-[debug] [2022-12-17T23:02:04.466Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Rudra\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
-[debug] [2022-12-17T23:02:04.466Z] CLI Version:   11.18.0
-[debug] [2022-12-17T23:02:04.466Z] Platform:      win32
-[debug] [2022-12-17T23:02:04.466Z] Node Version:  v18.12.1
-[debug] [2022-12-17T23:02:04.467Z] Time:          Sat Dec 17 2022 18:02:04 GMT-0500 (Eastern Standard Time)
-[debug] [2022-12-17T23:02:04.467Z] ----------------------------------------------------------------------
+[debug] [2022-12-18T19:34:53.052Z] ----------------------------------------------------------------------
+[debug] [2022-12-18T19:34:53.054Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Rudra\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2022-12-18T19:34:53.054Z] CLI Version:   11.18.0
+[debug] [2022-12-18T19:34:53.054Z] Platform:      win32
+[debug] [2022-12-18T19:34:53.054Z] Node Version:  v18.12.1
+[debug] [2022-12-18T19:34:53.055Z] Time:          Sun Dec 18 2022 14:34:53 GMT-0500 (Eastern Standard Time)
+[debug] [2022-12-18T19:34:53.055Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2022-12-17T23:02:04.571Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2022-12-17T23:02:04.572Z] > authorizing via signed-in user (rudrapateldev@gmail.com)
-[debug] [2022-12-17T23:02:04.959Z] java version "17.0.1" 2021-10-19 LTS
-Java(TM) SE Runtime Environment (build 17.0.1+12-LTS-39)
+[debug] [2022-12-18T19:34:53.155Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-18T19:34:53.155Z] > authorizing via signed-in user (rudrapateldev@gmail.com)
+[debug] [2022-12-18T19:34:53.527Z] java version "17.0.1" 2021-10-19 LTS
+
+[debug] [2022-12-18T19:34:53.528Z] Java(TM) SE Runtime Environment (build 17.0.1+12-LTS-39)
 Java HotSpot(TM) 64-Bit Server VM (build 17.0.1+12-LTS-39, mixed mode, sharing)
 
-[debug] [2022-12-17T23:02:04.984Z] Parsed Java major version: 17
-[info] i  emulators: Starting emulators: auth, firestore, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, firestore, hosting"}}
-[debug] [2022-12-17T23:02:04.998Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2022-12-17T23:02:04.998Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2022-12-17T23:02:04.998Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2022-12-17T23:02:04.998Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2022-12-17T23:02:04.998Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2022-12-17T23:02:04.998Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}]},"metadata":{"message":"assigned listening specs for emulators"}}
-[debug] [2022-12-17T23:02:05.007Z] [hub] writing locator at C:\Users\Rudra\AppData\Local\Temp\hub-invadev-368018.json
-[debug] [2022-12-17T23:02:05.018Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2022-12-17T23:02:05.018Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
-[debug] [2022-12-17T23:02:05.018Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","C:\\Users\\Rudra\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.15.1.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","invadev-368018","--rules","C:\\Users\\Rudra\\Desktop\\projects\\invaview\\firestore.rules","--single_project_mode",true],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\Rudra\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.15.1.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"invadev-368018\",\"--rules\",\"C:\\\\Users\\\\Rudra\\\\Desktop\\\\projects\\\\invaview\\\\firestore.rules\",\"--single_project_mode\",true],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false}"}}
+[debug] [2022-12-18T19:34:53.546Z] Parsed Java major version: 17
+[info] i  emulators: Starting emulators: auth, firestore {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, firestore"}}
+[debug] [2022-12-18T19:34:53.557Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-12-18T19:34:53.557Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-12-18T19:34:53.558Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-12-18T19:34:53.558Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-12-18T19:34:53.558Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2022-12-18T19:34:53.567Z] [hub] writing locator at C:\Users\Rudra\AppData\Local\Temp\hub-invadev-368018.json
+[debug] [2022-12-18T19:34:53.579Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-12-18T19:34:53.579Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2022-12-18T19:34:53.579Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","C:\\Users\\Rudra\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.15.1.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","invadev-368018","--rules","C:\\Users\\Rudra\\Desktop\\projects\\invaview\\firestore.rules","--single_project_mode",true],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\Rudra\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.15.1.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"invadev-368018\",\"--rules\",\"C:\\\\Users\\\\Rudra\\\\Desktop\\\\projects\\\\invaview\\\\firestore.rules\",\"--single_project_mode\",true],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false}"}}
 [info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
 [info] +  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
-[debug] [2022-12-17T23:02:11.851Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/invadev-368018/sites 
-[debug] [2022-12-17T23:02:12.362Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/invadev-368018/sites 200
-[debug] [2022-12-17T23:02:12.362Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/invadev-368018/sites {"sites":[{"name":"projects/invadev-368018/sites/invadev-368018","defaultUrl":"https://invadev-368018.web.app","type":"DEFAULT_SITE"}]}
-[debug] [2022-12-17T23:02:12.363Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/invadev-368018/webApps/-/config [none]
-[debug] [2022-12-17T23:02:12.877Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/invadev-368018/webApps/-/config 200
-[debug] [2022-12-17T23:02:12.877Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/invadev-368018/webApps/-/config {"projectId":"invadev-368018","appId":"1:745258602314:web:cc74cfc97820d7ce8f7bb3","storageBucket":"invadev-368018.appspot.com","locationId":"us-central","apiKey":"AIzaSyDxK38T_hd6fJjE-7IzW31YESofQy0gkdI","authDomain":"invadev-368018.firebaseapp.com","messagingSenderId":"745258602314","measurementId":"G-V0XCTWV53T"}
-[debug] [2022-12-17T23:02:12.891Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/invadev-368018 [none]
-[debug] [2022-12-17T23:02:13.122Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/invadev-368018 200
-[debug] [2022-12-17T23:02:13.123Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/invadev-368018 {"projectId":"invadev-368018","projectNumber":"745258602314","displayName":"invadev","name":"projects/invadev-368018","resources":{"hostingSite":"invadev-368018","storageBucket":"invadev-368018.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_23ea0fff-5e1c-4575-a1d3-fda56886d51c"}
-[info] i  hosting[invadev-368018]: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
-[info] +  hosting[invadev-368018]: Local server: http://127.0.0.1:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5000\u001b[22m\u001b[24m"}}
-[info] i  ui: downloading ui-v1.11.1.zip... {"metadata":{"emulator":{"name":"ui"},"message":"downloading ui-v1.11.1.zip..."}}
-[debug] [2022-12-17T23:02:13.159Z] >>> [apiv2][query] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.11.1.zip 
-[debug] [2022-12-17T23:02:13.246Z] <<< [apiv2][status] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.11.1.zip 200
-[debug] [2022-12-17T23:02:13.246Z] <<< [apiv2][body] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.11.1.zip [stream]
-[info] i  ui: Removing outdated emulator files: ui-v1.9.0 {"metadata":{"emulator":{"name":"ui"},"message":"Removing outdated emulator files: ui-v1.9.0"}}
-[info] i  ui: Removing outdated emulator files: ui-v1.9.0.zip {"metadata":{"emulator":{"name":"ui"},"message":"Removing outdated emulator files: ui-v1.9.0.zip"}}
-[debug] [2022-12-17T23:02:16.249Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2022-12-17T23:02:16.249Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
-[debug] [2022-12-17T23:02:16.249Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\Rudra\\.cache\\firebase\\emulators\\ui-v1.11.1\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\Rudra\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.1\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[debug] [2022-12-18T19:35:00.835Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-12-18T19:35:00.835Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-12-18T19:35:00.835Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\Rudra\\.cache\\firebase\\emulators\\ui-v1.11.1\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\Rudra\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.1\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
 [info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
-[debug] [2022-12-17T23:02:16.356Z] Web / API server started at 127.0.0.1:4000
+[debug] [2022-12-18T19:35:00.956Z] Web / API server started at 127.0.0.1:4000
  {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
-[debug] [2022-12-17T23:02:16.356Z] Web / API server started at ::1:4000
+[debug] [2022-12-18T19:35:00.957Z] Web / API server started at ::1:4000
  {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
 [info] 
 ┌─────────────────────────────────────────────────────────────┐
@@ -63,50 +46,67 @@ Java HotSpot(TM) 64-Bit Server VM (build 17.0.1+12-LTS-39, mixed mode, sharing)
 │ Authentication │ 127.0.0.1:9099 │ http://127.0.0.1:4000/auth      │
 ├────────────────┼────────────────┼─────────────────────────────────┤
 │ Firestore      │ 127.0.0.1:8080 │ http://127.0.0.1:4000/firestore │
-├────────────────┼────────────────┼─────────────────────────────────┤
-│ Hosting        │ 127.0.0.1:5000 │ n/a                             │
 └────────────────┴────────────────┴─────────────────────────────────┘
   Emulator Hub running at 127.0.0.1:4400
   Other reserved ports: 4500, 9150
 
 Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
  
-[info] i  hosting: 127.0.0.1 - - [17/Dec/2022:23:02:48 +0000] "GET / HTTP/1.1" 200 - "http://127.0.0.1:4000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [17/Dec/2022:23:02:48 +0000] \"GET / HTTP/1.1\" 200 - \"http://127.0.0.1:4000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36\""}}
-[debug] [2022-12-17T23:02:48.643Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js [none]
-[debug] [2022-12-17T23:02:48.646Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/9.15.0/firebase-auth-compat.js [none]
-[debug] [2022-12-17T23:02:48.694Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/9.15.0/firebase-database-compat.js [none]
-[debug] [2022-12-17T23:02:48.695Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore-compat.js [none]
-[debug] [2022-12-17T23:02:48.697Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/9.15.0/firebase-functions-compat.js [none]
-[debug] [2022-12-17T23:02:48.698Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/9.15.0/firebase-messaging-compat.js [none]
-[debug] [2022-12-17T23:02:48.721Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js 200
-[debug] [2022-12-17T23:02:48.721Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js [stream]
-[debug] [2022-12-17T23:02:48.722Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/9.15.0/firebase-auth-compat.js 200
-[debug] [2022-12-17T23:02:48.722Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/9.15.0/firebase-auth-compat.js [stream]
-[info] i  hosting: 127.0.0.1 - - [17/Dec/2022:23:02:48 +0000] "GET /__/firebase/9.15.0/firebase-app-compat.js HTTP/1.1" 200 28790 "http://127.0.0.1:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [17/Dec/2022:23:02:48 +0000] \"GET /__/firebase/9.15.0/firebase-app-compat.js HTTP/1.1\" 200 28790 \"http://127.0.0.1:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36\""}}
-[debug] [2022-12-17T23:02:48.739Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/9.15.0/firebase-storage-compat.js [none]
-[info] i  hosting: 127.0.0.1 - - [17/Dec/2022:23:02:48 +0000] "GET /__/firebase/9.15.0/firebase-auth-compat.js HTTP/1.1" 200 36285 "http://127.0.0.1:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [17/Dec/2022:23:02:48 +0000] \"GET /__/firebase/9.15.0/firebase-auth-compat.js HTTP/1.1\" 200 36285 \"http://127.0.0.1:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36\""}}
-[debug] [2022-12-17T23:02:48.744Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics-compat.js [none]
-[debug] [2022-12-17T23:02:48.746Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/9.15.0/firebase-database-compat.js 200
-[debug] [2022-12-17T23:02:48.747Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/9.15.0/firebase-database-compat.js [stream]
-[debug] [2022-12-17T23:02:48.752Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/9.15.0/firebase-functions-compat.js 200
-[debug] [2022-12-17T23:02:48.752Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/9.15.0/firebase-functions-compat.js [stream]
-[info] i  hosting: 127.0.0.1 - - [17/Dec/2022:23:02:48 +0000] "GET /__/firebase/9.15.0/firebase-functions-compat.js HTTP/1.1" 200 8116 "http://127.0.0.1:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [17/Dec/2022:23:02:48 +0000] \"GET /__/firebase/9.15.0/firebase-functions-compat.js HTTP/1.1\" 200 8116 \"http://127.0.0.1:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36\""}}
-[debug] [2022-12-17T23:02:48.754Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/9.15.0/firebase-remote-config-compat.js [none]
-[debug] [2022-12-17T23:02:48.765Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore-compat.js 200
-[debug] [2022-12-17T23:02:48.765Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore-compat.js [stream]
-[debug] [2022-12-17T23:02:48.768Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/9.15.0/firebase-messaging-compat.js 200
-[debug] [2022-12-17T23:02:48.768Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/9.15.0/firebase-messaging-compat.js [stream]
-[info] i  hosting: 127.0.0.1 - - [17/Dec/2022:23:02:48 +0000] "GET /__/firebase/9.15.0/firebase-messaging-compat.js HTTP/1.1" 200 38219 "http://127.0.0.1:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [17/Dec/2022:23:02:48 +0000] \"GET /__/firebase/9.15.0/firebase-messaging-compat.js HTTP/1.1\" 200 38219 \"http://127.0.0.1:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36\""}}
-[info] i  hosting: 127.0.0.1 - - [17/Dec/2022:23:02:48 +0000] "GET /__/firebase/9.15.0/firebase-database-compat.js HTTP/1.1" 200 165433 "http://127.0.0.1:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [17/Dec/2022:23:02:48 +0000] \"GET /__/firebase/9.15.0/firebase-database-compat.js HTTP/1.1\" 200 165433 \"http://127.0.0.1:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36\""}}
-[info] i  hosting: 127.0.0.1 - - [17/Dec/2022:23:02:48 +0000] "GET /__/firebase/init.js?useEmulator=true HTTP/1.1" 200 - "http://127.0.0.1:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [17/Dec/2022:23:02:48 +0000] \"GET /__/firebase/init.js?useEmulator=true HTTP/1.1\" 200 - \"http://127.0.0.1:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36\""}}
-[info] i  hosting: 127.0.0.1 - - [17/Dec/2022:23:02:48 +0000] "GET /__/firebase/9.15.0/firebase-firestore-compat.js HTTP/1.1" 200 94989 "http://127.0.0.1:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [17/Dec/2022:23:02:48 +0000] \"GET /__/firebase/9.15.0/firebase-firestore-compat.js HTTP/1.1\" 200 94989 \"http://127.0.0.1:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36\""}}
-[debug] [2022-12-17T23:02:48.813Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics-compat.js 200
-[debug] [2022-12-17T23:02:48.813Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics-compat.js [stream]
-[info] i  hosting: 127.0.0.1 - - [17/Dec/2022:23:02:48 +0000] "GET /__/firebase/9.15.0/firebase-analytics-compat.js HTTP/1.1" 200 8987 "http://127.0.0.1:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [17/Dec/2022:23:02:48 +0000] \"GET /__/firebase/9.15.0/firebase-analytics-compat.js HTTP/1.1\" 200 8987 \"http://127.0.0.1:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36\""}}
-[debug] [2022-12-17T23:02:48.816Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/9.15.0/firebase-storage-compat.js 200
-[debug] [2022-12-17T23:02:48.816Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/9.15.0/firebase-storage-compat.js [stream]
-[debug] [2022-12-17T23:02:48.818Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/9.15.0/firebase-remote-config-compat.js 200
-[debug] [2022-12-17T23:02:48.818Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/9.15.0/firebase-remote-config-compat.js [stream]
-[info] i  hosting: 127.0.0.1 - - [17/Dec/2022:23:02:48 +0000] "GET /__/firebase/9.15.0/firebase-remote-config-compat.js HTTP/1.1" 200 27216 "http://127.0.0.1:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [17/Dec/2022:23:02:48 +0000] \"GET /__/firebase/9.15.0/firebase-remote-config-compat.js HTTP/1.1\" 200 27216 \"http://127.0.0.1:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36\""}}
-[info] i  hosting: 127.0.0.1 - - [17/Dec/2022:23:02:48 +0000] "GET /__/firebase/9.15.0/firebase-storage-compat.js HTTP/1.1" 200 39372 "http://127.0.0.1:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [17/Dec/2022:23:02:48 +0000] \"GET /__/firebase/9.15.0/firebase-storage-compat.js HTTP/1.1\" 200 39372 \"http://127.0.0.1:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36\""}}
-[info] i  hosting: 127.0.0.1 - - [17/Dec/2022:23:02:49 +0000] "GET /favicon.ico HTTP/1.1" 200 - "http://127.0.0.1:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [17/Dec/2022:23:02:49 +0000] \"GET /favicon.ico HTTP/1.1\" 200 - \"http://127.0.0.1:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36\""}}
+[debug] [2022-12-19T01:21:20.221Z] ----------------------------------------------------------------------
+[debug] [2022-12-19T01:21:20.223Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Rudra\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2022-12-19T01:21:20.223Z] CLI Version:   11.18.0
+[debug] [2022-12-19T01:21:20.223Z] Platform:      win32
+[debug] [2022-12-19T01:21:20.223Z] Node Version:  v18.12.1
+[debug] [2022-12-19T01:21:20.230Z] Time:          Sun Dec 18 2022 20:21:20 GMT-0500 (Eastern Standard Time)
+[debug] [2022-12-19T01:21:20.230Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-12-19T01:21:20.234Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2022-12-19T01:21:20.328Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-19T01:21:20.329Z] > authorizing via signed-in user (rudrapateldev@gmail.com)
+[debug] [2022-12-19T01:21:20.457Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2022-12-19T01:21:20.457Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2022-12-19T01:21:20.673Z] java version "17.0.1" 2021-10-19 LTS
+Java(TM) SE Runtime Environment (build 17.0.1+12-LTS-39)
+
+[debug] [2022-12-19T01:21:20.674Z] Java HotSpot(TM) 64-Bit Server VM (build 17.0.1+12-LTS-39, mixed mode, sharing)
+
+[debug] [2022-12-19T01:21:20.692Z] Parsed Java major version: 17
+[info] i  emulators: Starting emulators: auth, firestore {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, firestore"}}
+[debug] [2022-12-19T01:21:20.706Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-12-19T01:21:20.706Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-12-19T01:21:20.706Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-12-19T01:21:20.706Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-12-19T01:21:20.707Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[warn] !  emulators: It seems that you are running multiple instances of the emulator suite for project invadev-368018. This may result in unexpected behavior. 
+[debug] [2022-12-19T01:21:20.717Z] [hub] writing locator at C:\Users\Rudra\AppData\Local\Temp\hub-invadev-368018.json
+[debug] [2022-12-19T01:21:20.729Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-12-19T01:21:20.729Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2022-12-19T01:21:20.730Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","C:\\Users\\Rudra\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.15.1.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","invadev-368018","--rules","C:\\Users\\Rudra\\Desktop\\projects\\invaview\\firestore.rules","--single_project_mode",true],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\Rudra\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.15.1.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"invadev-368018\",\"--rules\",\"C:\\\\Users\\\\Rudra\\\\Desktop\\\\projects\\\\invaview\\\\firestore.rules\",\"--single_project_mode\",true],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
+[info] +  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
+[debug] [2022-12-19T01:21:27.790Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-12-19T01:21:27.790Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-12-19T01:21:27.790Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\Rudra\\.cache\\firebase\\emulators\\ui-v1.11.1\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\Rudra\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.1\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2022-12-19T01:21:27.903Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2022-12-19T01:21:27.904Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────────┬────────────────┬─────────────────────────────────┐
+│ Emulator       │ Host:Port      │ View in Emulator UI             │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Authentication │ 127.0.0.1:9099 │ http://127.0.0.1:4000/auth      │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Firestore      │ 127.0.0.1:8080 │ http://127.0.0.1:4000/firestore │
+└────────────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500, 9150
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 

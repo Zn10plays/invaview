@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography'
 import Avatar from '@mui/material/Avatar'
 import IconButton from '@mui/material/IconButton'
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
-import { styled } from '@mui/material/styles'
+import {styled, Theme} from '@mui/material/styles'
 import Menu from '@mui/icons-material/Menu';
 import {useAuthState} from "react-firebase-hooks/auth";
 import Link from "next/link";
@@ -63,7 +63,7 @@ export default function Navbar(props: NavbarProps) {
 
   const [user, loading, error] = useAuthState(auth);
 
-  return <AppBar position={'fixed'} sx={{display: 'flex'}} open={props.open}>
+  return <AppBar position={'fixed'} sx={{display: 'flex', flex: '1 0'}} open={props.open}>
     <Toolbar>
       <MenuButton onClick={() => {props.toggle()}}>
         <Menu color='action' />

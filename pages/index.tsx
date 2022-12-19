@@ -22,7 +22,7 @@ export default function Home() {
   }
 
   return (
-    <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%'}}>
+    <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh'}}>
       <Head>
         <title>Invadev</title>
         <meta name="description" content="Project management by Zn10plays" />

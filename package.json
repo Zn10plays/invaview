@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start -p $PORT",
-    "lint": "next lint"
+    "lint": "next lint",
+    "emulate": "firebase emulators:start"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
@@ -19,10 +20,14 @@
     "@types/react-dom": "18.0.9",
     "echarts-for-react": "^3.0.2",
     "firebase": "^9.15.0",
+    "firebase-admin": "^11.4.0",
     "next": "13.0.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-firebase-hooks": "^5.1.1",
     "typescript": "4.9.3"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0"
   }
 }

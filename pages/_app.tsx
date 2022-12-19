@@ -26,7 +26,7 @@ export default function App({ Component, pageProps }: AppProps) {
   );
 
   return <ThemeProvider theme={theme}>
-    <Paper sx={{height: '100vh'}} square>
+    <Paper sx={{minHeight: '100vh'}} square>
       <Component {...pageProps} />
     </Paper>
   </ThemeProvider>
