@@ -11,6 +11,9 @@ interface MainBoxProps extends BoxProps {
 const MainBox = styled(Box, {
   shouldForwardProp: (prop) => prop !== 'open'
 })<MainBoxProps>(({theme, open}) => ({
+  display:'flex',
+  flexDirection: 'column',
+  width: '100%',
   [theme.breakpoints.up('md')]: {
     width: 'calc(100% - 240px)',
   },
@@ -32,8 +35,8 @@ export default function Layout(props: LayoutProps) {
   return <Box sx={{display: 'flex', minHeight: '100vh'}}>
     <Navbar open={isNavOpen}  toggle={toggleNav} />
     <Drawer open={isNavOpen} toggle={toggleNav}/>
-    <MainBox component="main" sx={{display:'flex'}}>
-      <DrawerHeader sx={{flex: 'none'}} />
+    <MainBox component="main" sx={{flexDirection: 'column', display: 'flex'}}>
+      <DrawerHeader />
       {props.children}
     </MainBox>
   </Box>
