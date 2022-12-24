@@ -1,8 +1,11 @@
 import Box, {BoxProps} from "@mui/material/Box";
 import Drawer, {DrawerHeader} from "./Drawer";
 import Navbar from "./Navbar";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {styled} from '@mui/material/styles'
+import {useAuthState} from "react-firebase-hooks/auth";
+import {auth} from "../../firebase/firebase";
+import {useRouter} from "next/router";
 
 interface MainBoxProps extends BoxProps {
   open?: boolean
@@ -27,6 +30,18 @@ interface LayoutProps {
 }
 export default function Layout(props: LayoutProps) {
   const [isNavOpen, setNavOpen] = useState(false);
+  const [user, loading, error] = useAuthState(auth);
+  const router = useRouter();
+
+  // block all user who got no rights
+  useEffect(() => {
+    if (!user) return
+    user.getIdTokenResult()
+      .then((idToken) => {
+        if (!idToken.claims.invader)
+          router.push('/')
+      })
+  }, [user])
 
   const toggleNav = () => {
     setNavOpen(!isNavOpen);
