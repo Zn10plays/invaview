@@ -1,6 +1,6 @@
 import Grid from "@mui/material/Grid";
 import {useEffect, useState} from "react";
-import {collection, CollectionReference, getDocs, query, where} from "@firebase/firestore";
+import {collection, CollectionReference, DocumentReference, getDocs, query, where} from "@firebase/firestore";
 import {auth, firestore, storage} from "../../firebase/firebase";
 import {Photo} from "../../types/database";
 import {useAuthState} from "react-firebase-hooks/auth";
@@ -24,9 +24,9 @@ interface ResponsiveImageProps {
 
 function ResponsiveImage (props: ResponsiveImageProps) {
   const [downloadUrl, loading, error] = useDownloadURL(ref(storage, props.doc.location));
-
+  const loading1 = true
   return <>
-    {loading && <Skeleton sx={{height: '100%', width: '100%'}} />}
+    {loading && <Skeleton sx={{height: '100%', width: '100%', minHeight: '126px'}} />}
     {!loading && <Paper sx={{height: 1}} variant={'outlined'}>
       <Image src={downloadUrl} alt={props.doc.name} />
     </Paper>}
@@ -34,11 +34,12 @@ function ResponsiveImage (props: ResponsiveImageProps) {
 }
 
 interface PhotoBookProps {
-
+  additions: Photo[];
+  clearQueue(): void
 }
 
 export default function PhotoBook (props: PhotoBookProps) {
-  const [photos, setPhotos] = useState<Photo[]|undefined>(undefined);
+  const [photos, setPhotos] = useState<Photo[]>([]);
   const [user, loading, error] = useAuthState(auth);
 
   useEffect(() => {
@@ -50,9 +51,18 @@ export default function PhotoBook (props: PhotoBookProps) {
     res.then(snapShot => {
       setPhotos(snapShot.docs.map(photo => photo.data()));
     })
-  }, [user])
+  }, [user]);
+
+  const queueSize = props.additions.length
+  useEffect(() => {
+    if (props.additions.length > 0) {
+      setPhotos([...props.additions, ...photos]);
+      props.clearQueue();
+    }
+  }, [queueSize]);
+
   return <Grid container columns={{xs: 9, md: 12, lg: 15, xl: 18}} sx={{p: 1}} spacing={{xs: 0, sm: 1}}>
-    {photos != undefined && photos.map<JSX.Element>(item => (
+    {photos.length > 0 && photos.map<JSX.Element>(item => (
       <Grid item key={item.name} xs={3} md={3} lg={3} xl={3} sx={{
         display:'flex',
         alignItems: 'center',

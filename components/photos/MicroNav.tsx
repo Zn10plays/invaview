@@ -6,7 +6,7 @@ import SearchIcon from '@mui/icons-material/Search'
 import InputAdornment from '@mui/material/InputAdornment';
 import IconButton from "@mui/material/IconButton";
 import FilterListIcon from '@mui/icons-material/FilterList';
-import {ChangeEvent} from "react";
+import {ChangeEvent, useState} from "react";
 
 interface SmallNavProps {
   onUpload(file: File | FileList): Promise<void>;
@@ -14,15 +14,22 @@ interface SmallNavProps {
 
 export default function SmallNav(props: SmallNavProps) {
 
+  const [isUploading, setIsUploading] = useState(false);
+
   const handleUpdate = (event: ChangeEvent<HTMLInputElement>) => {
     if (event.target.files === null) return;
+    setIsUploading(true);
+    console.log('uploading started')
     props.onUpload(event.target.files)
-    console.log('uploading')
+      .then(() => {
+        setIsUploading(false);
+        console.log('uploading')
+      })
   }
 
   return <Paper variant={'outlined'} sx={{m: 1, p: '2px 4px', display: 'flex'}}>
     <IconButton><FilterListIcon/></IconButton>
-    <span style={{flex: '1 1'}}></span>
+    <span style={{flex: '1 1'}} />
     <Paper sx={{display: 'flex', alignItems: 'center'}}>
       <TextField
         size={'small'}
@@ -36,9 +43,9 @@ export default function SmallNav(props: SmallNavProps) {
           </InputAdornment>
         }}/>
     </Paper>
-    <Button component="label" endIcon={<UploadIcon/>} sx={{mx: 1}}  color={'inherit'} >
+    <Button component="label" endIcon={<UploadIcon/>} sx={{mx: 1}} color={'inherit'} >
       Upload
-      <input hidden accept="image/*" multiple type="file" onChange={handleUpdate} />
+      <input hidden accept="image/*" multiple type="file" onChange={handleUpdate} disabled={isUploading}/>
     </Button>
   </Paper>
 }

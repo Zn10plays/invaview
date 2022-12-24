@@ -18,19 +18,22 @@ export default function DropBox(props: DropBoxProps) {
 
   const handeDrag = (event: DragEvent<HTMLDivElement>) => {
     event.preventDefault();
-    if (isDragging || event.dataTransfer.files.length === 0) return;
+    if (isDragging || event.dataTransfer.items.length === 0) return;
     setIsDragging(true);
   };
   const handeDrop = (event: DragEvent<HTMLDivElement>) => {
     event.preventDefault();
+    props.onUpload(event.dataTransfer.files);
     setIsDragging(false);
   };
   return <Box sx={{flex: '1 1'}} onDragOver={handeDrag} onDrop={handeDrop}>
     <Modal
       open={isDragging}
       onClose={handleModalClose}
+      onDragLeave={handleModalClose}
     >
-      <Paper sx={{
+      <Paper
+        sx={{
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',

@@ -38,7 +38,7 @@ export default function Layout(props: LayoutProps) {
     if (!user) return
     user.getIdTokenResult()
       .then((idToken) => {
-        if (!idToken.claims.invader)
+        if (!!idToken.claims.admin && !!idToken.claims.invader)
           router.push('/')
       })
   }, [user])
