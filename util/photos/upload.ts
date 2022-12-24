@@ -7,7 +7,6 @@ import {Photo} from "../../types/database";
 
 export default async function UploadPhoto(file: Blob | File) : Promise<Photo|undefined> {
   const user = auth.currentUser;
-
   if (!user) throw new Error('NO USER A')
 
   const newName = uuidv4();
@@ -21,13 +20,15 @@ export default async function UploadPhoto(file: Blob | File) : Promise<Photo|und
         createdBy: user.uid,
         type: 'web',
         isPublic: false,
-        createdAt: serverTimestamp()
+        createdAt: serverTimestamp(),
       })
         .then(doc => {
           return getDoc(doc);
         })
         .then(res => {
-          return res.data();
+          const data = res.data() as Photo
+          data.ref = res.ref;
+          return data;
         })
     })
 }

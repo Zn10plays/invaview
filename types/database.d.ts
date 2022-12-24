@@ -1,4 +1,4 @@
-import {Timestamp} from "@firebase/firestore";
+import {DocumentReference, Timestamp} from "@firebase/firestore";
 
 export interface Photo {
   name: string;
@@ -7,4 +7,5 @@ export interface Photo {
   createdAt: Timestamp;
   createdBy: string;
   isPublic: boolean;
+  ref?: DocumentReference<Photo>;
 }
