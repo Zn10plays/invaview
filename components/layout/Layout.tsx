@@ -35,17 +35,19 @@ export default function Layout(props: LayoutProps) {
 
   // block all user who got no rights
   useEffect(() => {
+
+    if (loading) return;
+
     if (!user) {
       router.push('/')
       return
     }
     user.getIdTokenResult()
       .then((idToken) => {
-        console.log(idToken.claims)
         if (!idToken.claims.admin && !idToken.claims.invader)
           router.push('/')
       })
-  }, [])
+  }, [user])
 
   const toggleNav = () => {
     setNavOpen(!isNavOpen);

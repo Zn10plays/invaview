@@ -19,11 +19,9 @@ export default function SmallNav(props: SmallNavProps) {
   const handleUpdate = (event: ChangeEvent<HTMLInputElement>) => {
     if (event.target.files === null) return;
     setIsUploading(true);
-    console.log('uploading started')
     props.onUpload(event.target.files)
       .then(() => {
         setIsUploading(false);
-        console.log('uploading')
       })
   }
 

@@ -5,10 +5,11 @@ import DropBox from "../../components/photos/DropBox";
 import UploadPhoto from "../../util/photos/upload";
 import {useState} from "react";
 import {Photo} from "../../types/database";
+import {DocumentSnapshot} from "@firebase/firestore";
 
 export default function Photos() {
 
-  const [additions, setAdditions] = useState<Photo[]>([]);
+  const [additions, setAdditions] = useState<DocumentSnapshot<Photo>[]>([]);
 
   const handleUpload = async (files: File | FileList) => {
     if (files instanceof FileList)
@@ -20,8 +21,7 @@ export default function Photos() {
       .then(data => addToQueue(data));
   };
 
-  const addToQueue = (data: Photo | undefined) => {
-    if (!data) return;
+  const addToQueue = (data: DocumentSnapshot<Photo>) => {
     setAdditions([...additions, ...[data]])
   }
 

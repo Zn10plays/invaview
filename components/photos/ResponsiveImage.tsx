@@ -11,7 +11,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import DownloadIcon from '@mui/icons-material/Download'
 import Box from "@mui/material/Box";
 import Tooltip from "@mui/material/Tooltip";
-import {deleteDoc, DocumentReference} from "@firebase/firestore";
+import {deleteDoc, DocumentReference, DocumentSnapshot, QueryDocumentSnapshot} from "@firebase/firestore";
 
 const Image = styled('img') (({theme}) => ({
   objectFit: 'cover',
@@ -22,26 +22,29 @@ const Image = styled('img') (({theme}) => ({
 }))
 
 interface ResponsiveImageProps {
-  doc: Photo,
+  snapshot:  DocumentSnapshot<Photo>,
   onDeleted: (id: DocumentReference<Photo>) => void
 }
 
 export default function ResponsiveImage (props: ResponsiveImageProps) {
-  const imageRef = ref(storage, props.doc.location)
+  const {snapshot} = props;
+  const data = snapshot.data();
+
+  const imageRef = ref(storage, data?.location)
   const [downloadUrl, loading, error] = useDownloadURL(imageRef);
 
-  const handleShare = () => {};
+  const handleShare = () => {
+
+  };
 
   const handelDelete = () => {
-    if (!props.doc.ref) return;
-    deleteDoc(props.doc.ref);
+    deleteDoc(snapshot.ref);
     deleteObject(imageRef);
-    props.onDeleted(props.doc.ref);
+    props.onDeleted(snapshot.ref);
   }
 
   const handleDownload = async () => {
     const a = document.createElement('a');
-
     a.download = 'file';
     a.href = URL.createObjectURL(await getBlob(imageRef));
     a.addEventListener('click', (e) => {
@@ -53,7 +56,7 @@ export default function ResponsiveImage (props: ResponsiveImageProps) {
   return <>
     {loading && <Skeleton sx={{height: '100%', width: '100%', minHeight: '126px'}} />}
     {!loading && <Paper sx={{height: 1, position: 'relative'}} variant={'outlined'}>
-      <Image src={downloadUrl} alt={props.doc.name} />
+      <Image src={downloadUrl} alt={data?.name} />
       <Box sx={{position: 'absolute', top: 0, right: 0}}>
         <IconButton onClick={handelDelete}>
           <DeleteIcon fontSize={'small'} />

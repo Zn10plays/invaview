@@ -28,7 +28,6 @@ export default function LoginForm(props: LoginFormProps): JSX.Element {
   const [isInvalid, setInvalid] = useState(false);
 
   const validateAttempt = (userCredit: UserCredential | undefined) => {
-    console.log(userCredit);
     if (!userCredit) {
       return;
     }
