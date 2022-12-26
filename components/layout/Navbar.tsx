@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography'
 import Avatar from '@mui/material/Avatar'
 import IconButton from '@mui/material/IconButton'
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
-import {styled, Theme} from '@mui/material/styles'
+import {styled} from '@mui/material/styles'
 import Menu from '@mui/icons-material/Menu';
 import {useAuthState} from "react-firebase-hooks/auth";
 import Link from "next/link";
