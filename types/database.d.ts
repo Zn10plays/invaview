@@ -7,4 +7,13 @@ export interface Photo {
   createdAt: Timestamp;
   createdBy: string;
   isPublic: boolean;
+  shorts: Short[];
+}
+
+export interface Short {
+  id: string;
+  createdAt: Timestamp;
+  variant: 'Temporary' | 'Permanent'
+  expiresAt: Timestamp | null;
+  isActive: boolean
 }

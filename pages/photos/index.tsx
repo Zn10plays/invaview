@@ -8,7 +8,6 @@ import {Photo} from "../../types/database";
 import {DocumentSnapshot} from "@firebase/firestore";
 
 export default function Photos() {
-
   const [additions, setAdditions] = useState<DocumentSnapshot<Photo>[]>([]);
 
   const handleUpload = async (files: File | FileList) => {

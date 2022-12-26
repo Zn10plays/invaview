@@ -11,7 +11,8 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import DownloadIcon from '@mui/icons-material/Download'
 import Box from "@mui/material/Box";
 import Tooltip from "@mui/material/Tooltip";
-import {deleteDoc, DocumentReference, DocumentSnapshot, QueryDocumentSnapshot} from "@firebase/firestore";
+import {deleteDoc, DocumentReference, DocumentSnapshot} from "@firebase/firestore";
+import {useState} from "react";
 
 const Image = styled('img') (({theme}) => ({
   objectFit: 'cover',
@@ -24,6 +25,7 @@ const Image = styled('img') (({theme}) => ({
 interface ResponsiveImageProps {
   snapshot:  DocumentSnapshot<Photo>,
   onDeleted: (id: DocumentReference<Photo>) => void
+  onSelect?: (image: string, snapshot: DocumentSnapshot<Photo>) => void
 }
 
 export default function ResponsiveImage (props: ResponsiveImageProps) {
@@ -32,9 +34,13 @@ export default function ResponsiveImage (props: ResponsiveImageProps) {
 
   const imageRef = ref(storage, data?.location)
   const [downloadUrl, loading, error] = useDownloadURL(imageRef);
+  // const [isFocused, setIsFocused] = useState(false);
 
   const handleShare = () => {
+    const { onSelect } = props;
+    if (!onSelect || !downloadUrl) return;
 
+    onSelect(downloadUrl, snapshot);
   };
 
   const handelDelete = () => {
@@ -74,8 +80,8 @@ export default function ResponsiveImage (props: ResponsiveImageProps) {
             <DownloadIcon fontSize={'small'} />
           </IconButton>
         </Tooltip>
-        <Tooltip title={'Copy Link'}>
-          <IconButton>
+        <Tooltip title={'Share'}>
+          <IconButton onClick={handleShare}>
             <ShareIcon fontSize={'small'} />
           </IconButton>
         </Tooltip>

@@ -28,6 +28,7 @@ export default async function UploadPhoto(file: Blob | File) : Promise<DocumentS
         type: 'web',
         isPublic: false,
         createdAt: serverTimestamp(),
+        shorts: []
       })
         .then(doc => {
           return getDoc(doc);
